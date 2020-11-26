@@ -5,7 +5,7 @@ First of all you have to download the following two files from [the kaggle datas
 1. `clean_recipes.csv`
 2. `clean_reviews.csv`
 
-These two files you have to put into the `./data` in the repository. This folder is excluded in the `.gitignore` file and will not get pushed to the repository. To start the Jupyter notebook first of all make sure you have Docker installed. With the following command you can start the PySpark server:
+These two files you have to put into the `./data` in the repository. This folder is excluded in the `.gitignore` file and will not get pushed to the repository. To start the Jupyter notebook first of all make sure you have Docker installed. With the following command you can start the PySpark server you have to do this in your clone repository because it uses the path working directory:
 
 ```console
 user@computer:~$ docker run -it --rm -p 8888:8888 -p 4040:4040 -v "${PWD}:/home/jovyan/work" --name spark jupyter/pyspark-notebook
